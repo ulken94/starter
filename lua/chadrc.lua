@@ -6,11 +6,21 @@
 local M = {}
 
 M.base46 = {
-  theme = "tokyonight",
+	theme = "tokyonight",
 
-  hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
+	hl_override = {
+		Comment = { italic = true },
+		["@comment"] = { italic = true },
+	},
+}
+
+M.ui = {
+  cmp = {
+    icons = true,
+    lspkind_text = true,
+    style = "default",
+    border_color = "grey_fg",
+    selected_item_bg = "colored",
   },
 }
 

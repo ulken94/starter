@@ -1,1 +1,6 @@
 lazy-lock.json
+.luarc.json
+coc-settings.json
+syntax
+ftplugin
+spell
