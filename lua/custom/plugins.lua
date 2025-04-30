@@ -16,5 +16,7 @@ return {
       })
     end
   },
+  -- require("custom.plugins.cmp"),
+  require("custom.plugins.copilot"),
 }
 
