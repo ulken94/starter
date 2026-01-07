@@ -1,7 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    python = { "black", "isort" },
+    python = { "black", "isort", "pyright" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
