@@ -26,8 +26,12 @@ return {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css", "python", "cpp"
+       "html", "css", "python", "cpp",
+       "markdown", "markdown_inline",
   		},
+      auto_install = true,
+      event = { "BufReadPost", "BufNewFile" },
+      build = ":TSUpdate",
   	},
   },
   {
