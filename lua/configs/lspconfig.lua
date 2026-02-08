@@ -34,7 +34,7 @@ vim.lsp.config.pyright = {
   -- [핵심] 루트 디렉토리 찾는 기준 (root_markers 사용)
   -- Neovim 0.11+ 에서는 root_dir 함수 대신 root_markers 리스트를 권장합니다.
   -- 파일이 있는 순서대로 루트를 찾습니다.
-  root_markers = { "pyrightconfig.json", ".git", ".venv" },
+  root_markers = { "pyrightconfig.json", ".git", ".venv", "pyproject.toml" },
 
   settings = {
     python = {
@@ -47,6 +47,20 @@ vim.lsp.config.pyright = {
   }
 }
 
+vim.lsp.config.ruff = {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+
+  root_markers = { "pyproject.toml", ".git", ".venv" },
+
+  settings = {
+    args = { "--max-line-length=88" },
+  }
+}
+
 -- Pyright 활성화
 vim.lsp.enable("pyright")
+-- Ruff 활성화
+vim.lsp.enable("ruff")
 -- read :h vim.lsp.config for changing options of lsp servers 
