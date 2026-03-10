@@ -2,38 +2,38 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "vim",
-    "lua",
-    "html",
-    "css",
-    "c",
-    "cpp",
-    "python",
+    "vim", "lua", "vimdoc",
+    "html", "css", "c", "cpp", "python",
+    "markdown", "markdown_inline",
   },
+  auto_install = true,
 }
 
 M.mason = {
   ensure_installed = {
-    --lua
+    -- lua
     "lua-language-server",
     "stylua",
 
-    -- web dev stuff
+    -- web
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "deno",
 
-    --python
-    "flake8",
-    "black",
+    -- python
     "pyright",
-    "python-lsp-server",
+    "ruff",
 
-    --cpp
+    -- cpp
     "clangd",
     "clang-format",
     "cpplint",
+
+    -- shell
+    "shfmt",
+
+    -- rust
+    "rustfmt",
   },
 }
 
@@ -49,7 +49,7 @@ M.nvterm = {
         height = 0.4,
       },
     },
-  }
+  },
 }
 
 return M
