@@ -1,16 +1,10 @@
-local options = {
+return {
   formatters_by_ft = {
     lua = { "stylua" },
-    python = {  "ruff_fix", "ruff_format" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    python = { "ruff_fix", "ruff_format" },
+    cpp = { "clang_format" },
+    c = { "clang_format" },
+    sh = { "shfmt" },
+    rust = { "rustfmt" },
   },
-
-  -- format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
 }
-
-return options

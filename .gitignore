@@ -4,3 +4,4 @@ coc-settings.json
 syntax
 ftplugin
 spell
+lua/custom/

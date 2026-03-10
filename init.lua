@@ -23,7 +23,7 @@ require("lazy").setup({
   },
 
   { import = "plugins" },
-  { import = "custom" },
+  vim.uv.fs_stat(vim.fn.stdpath "config" .. "/lua/custom") and { import = "custom" } or nil,
 }, lazy_config)
 
 -- load theme
